@@ -16,8 +16,12 @@
 Use Node.js and Express to build an API that performs CRUD operations on users.
 
 - Add a `.gitignore` file appropriate for `node.js` projects.
-- Add a new `package.json`.
+  - `npx gitignore node`
+- Add a new `package.json`. 
+  -`npm init` need to create index.js 
 - Add a `server` script to `package.json` that runs the API using `nodemon`.
+  - `npm i express` to add express to project
+  
 
 ### Write endpoints
 
