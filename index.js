@@ -15,6 +15,10 @@ server.post('/api/users', (req, res) => {
     res.status(201).json(userInfo);
 })
 
+server.get('/api/users', (req, res) => {
+    res.status(200).json(users)
+})
+
 server.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}`);
 });
