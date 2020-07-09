@@ -30,6 +30,17 @@ server.get('/api/users/:id', (req, res) =>{
 
 })
 
+server.delete('/api/users/:id', (req, res) => {
+    const { id } = req.params;
+    const found = users.find(user => user.id === id);
+    if (found) {
+        users = users.filter(user => user.id !== id);
+        res.status(200).json(found);
+    }else {
+        res.status(404).json({message: "user not found"})
+    }
+})
+
 server.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}`);
 });
